@@ -1,17 +1,11 @@
 <template>
-  <div class="main">
+  <div class="mainInfo">
     <div class="header">
-      <div class="headerLogo">
-        <img src="" alt="" />
-        <span>燧人科技</span>
-      </div>
-      <div class="headerOperate">
-        <span>首页</span>
-        <span>关于我们</span>
-      </div>
+      <span>首页</span>
+      <span>关于我们</span>
     </div>
     <div class="content">
-      <img src="" alt="" />
+      <img src="../assets/background.png" alt="" />
     </div>
     <div class="footer">
       随人科技 版权所有 2008-2020 苏ICP备15007261号-1
@@ -21,7 +15,7 @@
 
 <script>
 export default {
-  name: 'main',
+  name: 'mainInfo',
   props: {
     msg: String
   }
@@ -30,12 +24,31 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-.main {
+.mainInfo {
+  position: relative;
   .header {
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    width: 20%;
+    span {
+      margin-right: 10%;
+    }
   }
   .content {
+    width: 100%;
+    background-size: cover;
+    img {
+      background-size: contain;
+      width: 100%;
+      height: auto;
+    }
   }
   .footer {
+    position: absolute;
+    bottom: 3%;
+    width: 100%;
+    text-align: center;
   }
 }
 </style>
