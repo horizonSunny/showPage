@@ -1,11 +1,12 @@
 <template>
   <div class="mainInfo">
     <div class="header">
-      <span>首页</span>
-      <span>关于我们</span>
+      <span @click="clickhome">首页</span>
+      <span @click="clickConcat">关于我们</span>
     </div>
     <div class="content">
-      <img src="../assets/background.png" alt="" />
+      <img v-if="homeInfo" src="../assets/background.png" alt="" />
+      <img v-if="!homeInfo" src="../assets/guanyu.png" alt="" />
     </div>
     <div class="footer">
       随人科技 版权所有 2008-2020 苏ICP备15007261号-1
@@ -16,8 +17,18 @@
 <script>
 export default {
   name: 'mainInfo',
-  props: {
-    msg: String
+  data () {
+    return {
+      homeInfo: true
+    }
+  },
+  methods: {
+    clickhome () {
+      this.homeInfo = true
+    },
+    clickConcat () {
+      this.homeInfo = false
+    }
   }
 }
 </script>
