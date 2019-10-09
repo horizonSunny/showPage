@@ -9,7 +9,7 @@
       <img v-if="!homeInfo" src="../assets/guanyu.png" alt="" />
     </div>
     <div class="footer">
-      随人科技 版权所有 2008-2020 苏ICP备15007261号-1
+      燧人科技 版权所有 2008-2020 沪ICP备11000614号-4
     </div>
   </div>
 </template>
